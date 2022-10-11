@@ -3,10 +3,13 @@
 }
 
 .primera{
-    background-image: url('/assets/fondo_prin.jpg');
+    background-image: url('/assets/fondo_prin - copia.jpg');
     height: 100vh;
     display: flex;
     justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .transicion{
@@ -27,12 +30,21 @@
     top: 0;
 }
 
+.transicion3{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: flex-start;
+    background: linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0) 100%);
+    top: 0;
+}
+
 a{
     color: white;
     text-decoration: none;
 }
 
-.h1{
+.h1, .h2{
     color: beige;
     height: 100%;
     text-shadow: 2px 5px 5px rgba(0,0,0,0.5);
@@ -42,12 +54,21 @@ a{
 }
 
 .segunda{
+    background-image: url('/assets/prueba_1 - copia.png');
     height: 100vh;
     display: flex;
-    padding: 30px 0;
-    flex-direction: row;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: 100% 740px;
+    text-align: center;
+    color: white;
+    flex-direction: column;
 }
 
+.segunda.bg-fixed{
+    background-attachment: fixed;
+}
 
 .gif{
     position: relative;
@@ -65,7 +86,7 @@ a{
     transform: translateX(-50%);
     z-index: -1;
     background: radial-gradient(circle, rgba(67,62,64,0.7) 0, rgba(6,0,1,0) 100%);
-    box-shadow: 0 0 20px aliceblue;
+    box-shadow: 0 0 20px rgb(199, 47, 47);
 }
 
 .gif2 .sombra{
@@ -74,16 +95,29 @@ a{
 
 .muñeco1{
     background: url("/assets/gif_dibujo2.gif");
+    background-size: cover !important;
 }
 
 .muñeco2{
     background: url("/assets/gif_dibujo1.webp");
+    background-size: cover !important;
+}
+
+.muñeco3{
+    background: url("/assets/git_dibujo1.gif");
+}
+
+.muñeco4{
+    background: url("/assets/git_dibujo3.gif");
+    background-position: 0 !important;
 }
 
 .muñeco{
     height: 200px;
     width: 200px;
-    background-size: cover;
+    background-size: 180px 180px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .cuadro1, .cuadro3{
@@ -102,33 +136,57 @@ a{
     width: 60%;
 }
 
-.cuadro{
-    background: turquoise;
-    
-}
-
-
 .tercera{
+    background-image: url("/assets/fondo_ter.jpg");
     height: 110vh;
     background-position: center;
     background-size: contain;
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.mover{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px 50px 80px;
+    text-align: center;
+    color: aliceblue;
+    padding: 60px 50px 60px;
+}
+
+.h2, .h3{
+    font-family: 'Dosis', sans-serif;
+    text-shadow: 2px 5px 5px rgb(0 255 134 / 36%);
+}
+
+.h3{
+    padding: 30px;
+}
+
+.p_tercera, .p_cuadro, .p_video{
+    padding: 40px 150px 0;
+    text-shadow: 2px 5px 5px rgba(201, 52, 47, 0.36);
+    font-size: 18px;
+}
+
+.p_cuadro, .p_video{
+    padding: 0;
 }
 
 .imagen_larga{
-    background: white;
-    width: 70vw;
+    background: rgb(0, 0, 0);
+    width: 50vw;
     overflow: hidden;
-    height: 70vh;
+    height: 50vh;
     display: flex;
-    
+    border-radius: 40px;
+    filter: drop-shadow(-20px 9px 28px rgba(63, 223, 156, 0.5)); 
 }
 
 .imagen_larga:hover img{
-    left: -92%;
-    
+    left: -82%;   
 }
 
 .imagen_larga img{
@@ -140,13 +198,13 @@ a{
 }
 
 .cuarta{
-    height: 92vh;
+    height: 100vh;
     background-position: center;
     background-size: contain;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: black;
 }
 
 .contenedor_texto{
@@ -154,6 +212,9 @@ a{
     display: flex;
     align-items: center;
     padding: 20px 40px;
+    color: aliceblue;
+    flex-direction: column;
+    text-align: center;
 }
 
 .contenedor_video{
@@ -161,7 +222,8 @@ a{
     justify-content: center;
     height: min-content;
     flex-direction: row;
-    padding: 100px 0 0;
+    filter: drop-shadow(-15px 7px 21px rgba(63, 223, 156, 0.5)); 
+    
 }
 
 .video_fondo{
@@ -172,9 +234,4 @@ a{
     border-radius: 20px;
     width: 1200px;
     position: relative;
-}
-
-.segunda, .tercera, .cuarta{
-    background: black;
-    color: white;
 }

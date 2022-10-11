@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 
 })
 export class HomeComponent implements OnInit {
-
+  posicion = true
   constructor() {
 
     window.scroll = function() {
@@ -18,6 +18,12 @@ export class HomeComponent implements OnInit {
       }}
   }
   ngOnInit(): void {
+  }
+  @HostListener('window:scroll', ['$event']) 
+  comprobar(){
+    let pos = window.scrollY <= window.innerHeight*2.1
+    if(pos != this.posicion) this.posicion = pos
+    
   }
 }
 

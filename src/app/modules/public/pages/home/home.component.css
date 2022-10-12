@@ -93,26 +93,26 @@ a{
     bottom: -10px;
 }
 
-.muñeco1{
+.muneco1{
     background: url("/assets/gif_dibujo2.gif");
     background-size: cover !important;
 }
 
-.muñeco2{
+.muneco2{
     background: url("/assets/gif_dibujo1.webp");
     background-size: cover !important;
 }
 
-.muñeco3{
+.muneco3{
     background: url("/assets/git_dibujo1.gif");
 }
 
-.muñeco4{
+.muneco4{
     background: url("/assets/git_dibujo3.gif");
     background-position: 0 !important;
 }
 
-.muñeco{
+.muneco{
     height: 200px;
     width: 200px;
     background-size: 180px 180px;

@@ -1,26 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { LoginComponent } from './pages/login/login.component';
-import { SingUpComponent } from './pages/sing-up/sing-up.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: HomeComponent
+    path: "",
+    loadChildren: () =>
+      import("./modules/public/public-routing.module").then(
+        (m) => m.PublicRoutingModule
+      ),
   },
   {
-    path: 'login',
-    component: LoginComponent
+    path: "",
+    loadChildren: () =>
+      import("./modules/private/private-routing.module").then(
+        (m) => m.PrivateRoutingModule
+      ),
   },
   {
-    path:'signup',
-    component: SingUpComponent
+    path: "**",
+    redirectTo: "",
   },
-  {
-    path: '**',
-    redirectTo: ''
-  }
 ];
 
 @NgModule({

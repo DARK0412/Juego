@@ -3,7 +3,7 @@
 }
 
 .primera{
-    background-image: url('/assets/fondo_prin - copia.jpg');
+    background-image: url('/assets/fondo_prin2.jpg');
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -54,7 +54,7 @@ a{
 }
 
 .segunda{
-    background-image: url('/assets/prueba_1 - copia.png');
+    background-image: url('/assets/fondo_tercera.png');
     height: 100vh;
     display: flex;
     background-position: center;
